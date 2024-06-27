@@ -1,7 +1,7 @@
 const express = require('express');
 const config = require('./config');
 
-const clientes = require('./modulos/clientes/rutas')
+const clientes = require('./src/modulos/clientes/rutas')
 
 const app = express();
 
