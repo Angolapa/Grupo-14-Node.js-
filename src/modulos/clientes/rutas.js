@@ -1,10 +1,15 @@
 const  express = require('express');
-const respuestas =require('../../red/respuestas');
+
+const respuesta = require('../../red/respuestas');
+const controlador = require('./controlador')
 
 const router =  express.Router();
 
 router.get('/', function(req, res){
-    respuestas.success(req, res,'Todo ok desde clientes', 200)
+    const todos = controlador.todos()
+    .then((items) =>{
+        respuesta.success(req, res, items, 200);
+    });
 });
 
 module.exports = router;
