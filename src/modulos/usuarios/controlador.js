@@ -1,9 +1,8 @@
-const TABLA = 'clientes';
-
+const TABLA = 'usuarios';
 module.exports = function (dbInyectada) {
 
     let db = dbInyectada;
-
+    
     if (!db){
         db = require('../../DB/mysql');
     }
