@@ -15,7 +15,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Configuración
+// Configuración de puerto
 app.set('port', config.app.port);
 
 // Rutas
