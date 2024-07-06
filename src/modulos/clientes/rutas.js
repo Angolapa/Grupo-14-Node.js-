@@ -10,6 +10,7 @@ router.get('/:id', uno);
 router.post('/', agregar);
 router.put('/', eliminar);
 
+//trae todos los datos de la tabla clientes
 async function todos (req, res, next) {
     try{
         const items = await controlador.todos();

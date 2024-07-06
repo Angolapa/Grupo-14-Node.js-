@@ -1,6 +1,8 @@
 const mysql =  require('mysql');
 const config = require('../../config');
 
+//objeto dbconfig trae datos de host para función de conexion a base  de datos en "conMysql"
+
 const dbconfig = {
     host: config.mysql.host,
     user: config.mysql.user,

@@ -9,7 +9,7 @@ router.get('/', todos);
 router.get('/:id', uno);
 router.post('/', seguridad(), agregar);
 router.put('/', seguridad(), eliminar);
-
+//funcion para traer todos los objetos de la tabla
 async function todos (req, res, next) {
     try{
         const items = await controlador.todos();
@@ -18,7 +18,7 @@ async function todos (req, res, next) {
         next(err);
     }
 };
-
+//funcion para traer uno objeto especificando el nro de id al final de la ruta /n°
 async function uno (req, res, next) {
     try{
         const items = await controlador.uno(req.params.id);

@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+//llama-configura puerto,jwt y base de datos
 module.exports = {
     app :{
         port: process.env.PORT || 4000,
